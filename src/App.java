@@ -32,10 +32,19 @@ public class App {
        var firstBoxer = 78.2;
        var secondBoxer = 82.7;
        var bothBoxers = firstBoxer + secondBoxer;
-       var boxersDifference = secondBoxer % firstBoxer;
+       var boxersDifference = secondBoxer - firstBoxer;
        System.out.println(bothBoxers);
        System.out.println(boxersDifference);
-
+       //seven task
+       var differenceBoxers = secondBoxer % firstBoxer;
+       System.out.println(differenceBoxers);
+       //eight task
+       var allHours = 640;
+       var workers = allHours / 8;
+       System.out.println("Всего работников в компании - "+ workers +" человек");
+       var moreWorkers = workers + 94;
+       var workHours = allHours / moreWorkers;
+       System.out.println("Если в компании работает "+ moreWorkers +" человек, то всего "+ workHours +" часа работы может быть поделено между сотрудниками");
     }
     
 }
