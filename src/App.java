@@ -2,49 +2,14 @@
 public class App {
     
     public static void main(String[] args) throws Exception {
-       //first task
-       var dog = 8.0;
-       var cat = 3.6;
-       var papper = 763789;
-       System.out.println(dog + "\n" + cat + "\n" + papper);
-       //second task
-       dog += 4;
-       cat += 4;
-       papper += 4;
-       System.out.println("\n" + dog + "\n" + cat + "\n" + papper);
-       //third task
-       dog -= 3.5;
-       cat -= 1.6;
-       papper -= 7639;
-       System.out.println("\n" + dog + "\n" + cat + "\n" + papper);
-       //four task
-       var friend = 19;
-       System.out.println(friend);
-       System.out.println(friend += 2);
-       System.out.println(friend /= 7);
-       //five task
-       var frog = 3.5;
-       System.out.println(frog);
-       System.out.println(frog *= 10);
-       System.out.println(frog /= 3.5);
-       System.out.println(frog += 4);
-       //six task
-       var firstBoxer = 78.2;
-       var secondBoxer = 82.7;
-       var bothBoxers = firstBoxer + secondBoxer;
-       var boxersDifference = secondBoxer - firstBoxer;
-       System.out.println(bothBoxers);
-       System.out.println(boxersDifference);
-       //seven task
-       var differenceBoxers = secondBoxer % firstBoxer;
-       System.out.println(differenceBoxers);
-       //eight task
-       var allHours = 640;
-       var workers = allHours / 8;
-       System.out.println("Всего работников в компании - "+ workers +" человек");
-       var moreWorkers = workers + 94;
-       var workHours = allHours / moreWorkers;
-       System.out.println("Если в компании работает "+ moreWorkers +" человек, то всего "+ workHours +" часа работы может быть поделено между сотрудниками");
+        String ft = firstTask();
+        System.out.println(ft);
+    }
+    public static String firstTask(){
+        String output = "";
+        //find something about $variables
+        output += " ";
+        return output;
     }
     
 }
