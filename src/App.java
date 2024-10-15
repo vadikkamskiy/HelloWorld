@@ -27,7 +27,7 @@ public class App {
         String floatOutput = MessageFormat.format("Значение переменной floatVariable с типом float равно {0}", floatVariable);
         System.out.println(floatOutput);
 
-        Double doubleVariable = 3453.4567568876;
+        double doubleVariable = 3453.4567568876;
         String doubleOutput = MessageFormat.format("Значение переменной doubleVariable с типом double равно {0}", doubleVariable);
         System.out.println(doubleOutput);
     }
@@ -48,7 +48,7 @@ public class App {
         variables[4] = varFive;
         variables[5] = varSix;
         variables[6] = varSeven;
-        
+
         for(int i = 0; i < 7; i++){
             System.out.println(variables[i]);
         }
