@@ -14,52 +14,52 @@ public class App {
     }
     public static void firstTask(){
         System.out.println("First task \n");
-        int integerVariable = Integer.MAX_VALUE;
-        String integerOutput = MessageFormat.format("Значение переменной integerVariable с типом int равно {0}", integerVariable);
+        int integeriable = Integer.MAX_VALUE;
+        String integerOutput = MessageFormat.format("Значение переменной integeriable с типом int равно {0}", integeriable);
         System.out.println(integerOutput);
 
-        byte byteVariable = Byte.MAX_VALUE;
-        String byteOutput = MessageFormat.format("Значение переменной byteVariable с типом byte равно {0}", byteVariable);
+        byte byteiable = Byte.MAX_VALUE;
+        String byteOutput = MessageFormat.format("Значение переменной byteiable с типом byte равно {0}", byteiable);
         System.out.println(byteOutput);
 
-        short shortVariable = Short.MAX_VALUE;
-        String shortOutput = MessageFormat.format("Значение переменной shortVariable с типом short равно {0}", shortVariable);
+        short shortiable = Short.MAX_VALUE;
+        String shortOutput = MessageFormat.format("Значение переменной shortiable с типом short равно {0}", shortiable);
         System.out.println(shortOutput);
 
-        Long longVariable = Long.MAX_VALUE;
-        String longOutput = MessageFormat.format("Значение переменной longVariable с типом long равно {0}", longVariable);
+        Long longiable = Long.MAX_VALUE;
+        String longOutput = MessageFormat.format("Значение переменной longiable с типом long равно {0}", longiable);
         System.out.println(longOutput);
 
-        float floatVariable = 14.5456f;
-        String floatOutput = MessageFormat.format("Значение переменной floatVariable с типом float равно {0}", floatVariable);
+        float floatiable = 14.5456f;
+        String floatOutput = MessageFormat.format("Значение переменной floatiable с типом float равно {0}", floatiable);
         System.out.println(floatOutput);
 
-        double doubleVariable = 3453.4567568876;
-        String doubleOutput = MessageFormat.format("Значение переменной doubleVariable с типом double равно {0}", doubleVariable);
+        double doubleiable = 3453.4567568876;
+        String doubleOutput = MessageFormat.format("Значение переменной doubleiable с типом double равно {0}", doubleiable);
         System.out.println(doubleOutput);
     }
     public static void secondTask(){
         System.out.println("\n Second task \n");
 
-        Object[] variables = new Object[7];
-        float varOne = 27.12f;
-        long varTwo = 987678965549L;
-        double varThree = 2.786;
-        short varFour = 569;
-        var varFive = -159;
-        int varSix = 27897;
-        byte varSeven = 67;
+        Object[] iables = new Object[7];
+        float One = 27.12f;
+        long Two = 987678965549L;
+        double Three = 2.786;
+        short Four = 569;
+        int Five = -159;
+        int Six = 27897;
+        byte Seven = 67;
 
-        variables[0] = varOne;
-        variables[1] = varTwo;
-        variables[2] = varThree;
-        variables[3] = varFour;
-        variables[4] = varFive;
-        variables[5] = varSix;
-        variables[6] = varSeven;
+        iables[0] = One;
+        iables[1] = Two;
+        iables[2] = Three;
+        iables[3] = Four;
+        iables[4] = Five;
+        iables[5] = Six;
+        iables[6] = Seven;
 
         for(int i = 0; i < 7; i++){
-            System.out.println(variables[i]);
+            System.out.println(iables[i]);
         }
     }
     public static void thirdTask(){
@@ -77,14 +77,14 @@ public class App {
         System.out.println("\n Four task \n");
 
         int bottleInMinute = 16 /2;
-        int firstVar = 20;
-        int secondVar = 24 * 60;
-        int thirdVar = 3 * 24 * 60;
-        int fourVar = 30 * 24 * 60;
-        System.out.println("За "+ firstVar +" минут машина произвела " + bottleInMinute * firstVar + " штук бутылок");
-        System.out.println("За "+ secondVar + " минут машина произвела " + bottleInMinute * secondVar + " штук бутылок");
-        System.out.println("За "+ thirdVar + " минут машина произвела " + bottleInMinute * thirdVar + " штук бутылок");
-        System.out.println("За "+ fourVar + " минут машина произвела " + bottleInMinute * fourVar + " штук бутылок");
+        int first = 20;
+        int second = 24 * 60;
+        int third = 3 * 24 * 60;
+        int four = 30 * 24 * 60;
+        System.out.println("За "+ first +" минут машина произвела " + bottleInMinute * first + " штук бутылок");
+        System.out.println("За "+ second + " минут машина произвела " + bottleInMinute * second + " штук бутылок");
+        System.out.println("За "+ third + " минут машина произвела " + bottleInMinute * third + " штук бутылок");
+        System.out.println("За "+ four + " минут машина произвела " + bottleInMinute * four + " штук бутылок");
     }
     public static void fiveTask(){
         System.out.println("\n Five task \n");
