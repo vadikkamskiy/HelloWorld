@@ -3,13 +3,14 @@ import java.util.Scanner;
 public class App {
     
     public static void main(String[] args) throws Exception {
-        //firstTask();
-        //secondTask();
-        //thirdTask();
-        //fourTask();
-        //fiveTask();
-        //sixTask();
+        firstTask();
+        secondTask();
+        thirdTask();
+        fourTask();
+        fiveTask();
+        sixTask();
         sevenTask();
+        
     }
     public static void firstTask(){
         Scanner scan = new Scanner(System.in);
@@ -26,7 +27,6 @@ public class App {
         }else{
             System.out.println("Something went wrong");
         }
-        scan.close();
         System.out.println("First task gone\n\n");
     }
     public static void secondTask(){
@@ -39,7 +39,6 @@ public class App {
         else{
             System.out.println("you are may go walk without hat \n" + temperature + "degrees it's amazing" );
         }
-        scan.close();
         System.out.println("Second task gone\n\n");
     }
     public static void thirdTask(){
@@ -75,6 +74,7 @@ public class App {
     }
     public static void sixTask() {
         Scanner scan = new Scanner(System.in);
+        System.out.println("сколько занято мест?");
         int allPlaces = 102;
         int seating = 60;
         int passengers = scan.nextInt();
@@ -85,7 +85,6 @@ public class App {
         }else{
             System.out.println("мест нет");
         }
-        scan.close();
     }
     public static void sevenTask(){
         Scanner scan = new Scanner(System.in);
@@ -94,11 +93,12 @@ public class App {
         int second = scan.nextInt();
         int third = scan.nextInt();
         if(first>second && first > third){
-            System.out.println("first max" + first);
+            System.out.println("first max " + first);
         }else if(second > first && second > third){
             System.out.println("second max " + second);
         }else{
-            System.out.println("third max" + third);
+            System.out.println("third max " + third);
         }
+        scan.close();
     }
 }
