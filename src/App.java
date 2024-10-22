@@ -18,7 +18,7 @@ public class App {
         String ageString = scan.nextLine();
         int age = Integer.parseInt(ageString);
         if(!ageString.isEmpty() && age > 0){
-            if(age > 18){
+            if(age >= 18){
                 System.out.println("you are sooo adult \n" + age + " it's to much");
             }
             else{
@@ -45,7 +45,12 @@ public class App {
         int currentSpeed = 20;
         String normalSpeed = ", то можно ездить спокойно";
         String highSpeed = ", то придется заплатить штраф";
-        String output = currentSpeed <= 60 ? normalSpeed :highSpeed;
+        String output;
+        if(currentSpeed > 60){
+            output = highSpeed;
+        }else{
+            output = normalSpeed;
+        }
         System.out.println("ecли скорость : " + currentSpeed + output);
     }
     public static void fourTask(){
