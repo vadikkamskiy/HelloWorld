@@ -7,103 +7,96 @@ public class App {
         secondTask();
         thirdTask();
         fourTask();
-        fiveTask();
-        sixTask();
-        sevenTask();
-        
+        fiveTask();        
     }
     public static void firstTask(){
-        Scanner scan = new Scanner(System.in);
-        System.out.println("How old are you?");
-        String ageString = scan.nextLine();
-        int age = Integer.parseInt(ageString);
-        if(!ageString.isEmpty() && age > 0){
-            if(age >= 18){
-                System.out.println("you are sooo adult \n" + age + " it's to much");
-            }
-            else{
-                System.out.println("you are not old enough");
-            }
+        byte clientOS = 0;
+        if(clientOS == 0){
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        }else if(clientOS == 1){
+            System.out.println("Установите версию приложения для Android по ссылке");
         }else{
-            System.out.println("Something went wrong");
+            System.out.println("error");
         }
-        System.out.println("First task gone\n\n");
+
     }
     public static void secondTask(){
-        Scanner scan = new Scanner(System.in);
-        System.out.println("what is the temperature now");
-        int temperature = scan.nextInt();
-        if(temperature < 5){
-            System.out.println("you are need wear hat \n" + temperature + " degrees it's so cold");
+        byte clientOS = 0;
+        short clientDeviceYear = 2014;
+        if(clientDeviceYear <= 2015 && clientOS == 0){
+            System.out.println("Установите облегченную версию приложения для IOS по ссылке");
+        }else if(clientDeviceYear > 2015 && clientOS == 0){
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        }else if(clientDeviceYear <= 2015 && clientOS == 1){
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        }else{
+            System.out.println("Установите версию приложения для Android по ссылке");
         }
-        else{
-            System.out.println("you are may go walk without hat \n" + temperature + "degrees it's amazing" );
-        }
-        System.out.println("Second task gone\n\n");
+
     }
     public static void thirdTask(){
-        int currentSpeed = 20;
-        String normalSpeed = ", то можно ездить спокойно";
-        String highSpeed = ", то придется заплатить штраф";
-        String output;
-        if(currentSpeed > 60){
-            output = highSpeed;
-        }else{
-            output = normalSpeed;
+        short year = 2013;
+        if(year % 4 == 0 && year > 1584){
+            int everyHundred = year % 100;
+            int everyFourHundred = year % 400;
+            if(everyHundred == 0 && everyFourHundred == 0){
+                System.out.println("leap year");
+            }else if(everyFourHundred != 0 && everyHundred == 0){
+                System.out.println("not leap year");
+            }else{
+                System.out.println("leap year");
+            }
         }
-        System.out.println("ecли скорость : " + currentSpeed + output);
     }
     public static void fourTask(){
-        int currentAge = 37;
-        if(currentAge > 2 && currentAge <= 6){
-            System.out.println("Если возраст человека равен "+ currentAge+", то ему нужно ходить в детский сад ");
-        }else if(currentAge > 6 && currentAge <= 17){
-            System.out.println("Если возраст человека равен "+ currentAge+", то ему нужно ходить в школу ");
-        }else if (currentAge >= 18 && currentAge <= 24) {
-            System.out.println("Если возраст человека равен "+ currentAge+", его место в университете ");
-        }else if(currentAge > 24){
-            System.out.println("Если возраст человека равен "+ currentAge+", он должен работать и обеспечивать семью ");
+        int deliveryDistance = 95;
+        byte deliveryDay = 1;
+        if(deliveryDistance>=20 && deliveryDistance < 60){
+            deliveryDay++;
+        }else if(deliveryDistance>=60 && deliveryDistance < 100){
+            deliveryDay++;
         }else{
-            System.out.println("who are you?");
+            deliveryDay = 0;
+        }
+        switch (deliveryDay) {
+            case 0:
+                System.out.println("not delivery");
+                break;
+        
+            default:
+                System.out.println("Потребуется дней: " + deliveryDay);
+                break;
         }
     }
     public static void fiveTask(){
-        int childrenAge  = 5;
-        if(childrenAge < 5 ){
-            System.out.println("Если возраст ребенка равен " + childrenAge + " нельзя кататься на аттракционе");
-        }else if(childrenAge >= 5 && childrenAge < 14){
-            System.out.println("Если возраст ребенка равен " + childrenAge + " можно кататься на аттракционе в сопровождении");
-        }else if(childrenAge >= 14){
-            System.out.println("Если возраст ребенка равен " + childrenAge + " можно кататься без сопровождения взрослого");
-        }
-    }
-    public static void sixTask() {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("сколько занято мест?");
-        int allPlaces = 102;
-        int seating = 60;
-        int passengers = scan.nextInt();
-        if(passengers < seating){
-            System.out.println("В вагоне осталось " + (seating - passengers) +" сидячих мест");
-        }else if(passengers >= seating && passengers < allPlaces){
-            System.out.println("В вагоне осталось " + (allPlaces - passengers) +" стоячих мест");
+        byte monthNum =  5;
+        if(monthNum <= 12 && monthNum > 0){
+            switch (monthNum) {
+                case 12:
+                case 1:
+                case 2:
+                    System.out.println("Winter");
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    System.out.println("Spring");
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                    System.out.println("Summer");
+                    break;
+                case 9:
+                case 10:
+                case 11:
+                    System.out.println("autmun");
+                    break;
+                default:
+                    break;
+            }
         }else{
-            System.out.println("мест нет");
+            System.out.println("Error");
         }
-    }
-    public static void sevenTask(){
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Введите три числа");
-        int first = scan.nextInt();
-        int second = scan.nextInt();
-        int third = scan.nextInt();
-        if(first>second && first > third){
-            System.out.println("first max " + first);
-        }else if(second > first && second > third){
-            System.out.println("second max " + second);
-        }else{
-            System.out.println("third max " + third);
-        }
-        scan.close();
     }
 }
