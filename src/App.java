@@ -13,10 +13,8 @@ public class App {
         byte clientOS = 0;
         if(clientOS == 0){
             System.out.println("Установите версию приложения для iOS по ссылке");
-        }else if(clientOS == 1){
-            System.out.println("Установите версию приложения для Android по ссылке");
         }else{
-            System.out.println("error");
+            System.out.println("Установите версию приложения для Android по ссылке");
         }
 
     }
@@ -35,17 +33,13 @@ public class App {
 
     }
     public static void thirdTask(){
-        short year = 2013;
-        if(year % 4 == 0 && year > 1584){
-            int everyHundred = year % 100;
-            int everyFourHundred = year % 400;
-            if(everyHundred == 0 && everyFourHundred == 0){
-                System.out.println("leap year");
-            }else if(everyFourHundred != 0 && everyHundred == 0){
-                System.out.println("not leap year");
-            }else{
-                System.out.println("leap year");
-            }
+        short year = 2021;
+        int testFourHundred = year % 400;
+        int testHundred = year % 100;
+        if(year % 4 == 0 && year > 1584 && (testFourHundred == 0 || testHundred != 0)){
+            System.out.println(year + " - leap year");
+        }else{
+            System.out.println(year + " - not leap year");
         }
     }
     public static void fourTask(){
@@ -69,9 +63,9 @@ public class App {
         }
     }
     public static void fiveTask(){
-        byte monthNum =  5;
-        if(monthNum <= 12 && monthNum > 0){
-            switch (monthNum) {
+        byte monthNumber =  5;
+        if(monthNumber <= 12 && monthNumber > 0){
+            switch (monthNumber) {
                 case 12:
                 case 1:
                 case 2:
