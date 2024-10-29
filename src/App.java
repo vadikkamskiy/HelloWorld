@@ -7,90 +7,73 @@ public class App {
         secondTask();
         thirdTask();
         fourTask();
-        fiveTask();        
+        fiveTask();
+        sixTask();
+        sevenTask();
+        eightTask();
+        nineTask();
+        tenTask();        
     }
     public static void firstTask(){
-        byte clientOS = 0;
-        if(clientOS == 0){
-            System.out.println("Установите версию приложения для iOS по ссылке");
-        }else{
-            System.out.println("Установите версию приложения для Android по ссылке");
+        for(int i = 1; i < 10; i++){
+            System.out.println(i);
         }
-
     }
     public static void secondTask(){
-        byte clientOS = 0;
-        short clientDeviceYear = 2014;
-        if(clientDeviceYear <= 2015 && clientOS == 0){
-            System.out.println("Установите облегченную версию приложения для IOS по ссылке");
-        }else if(clientDeviceYear > 2015 && clientOS == 0){
-            System.out.println("Установите версию приложения для iOS по ссылке");
-        }else if(clientDeviceYear <= 2015 && clientOS == 1){
-            System.out.println("Установите облегченную версию приложения для Android по ссылке");
-        }else{
-            System.out.println("Установите версию приложения для Android по ссылке");
+        for(int i = 10; i>1; i--){
+            System.out.println(i);
         }
-
     }
     public static void thirdTask(){
-        short year = 2021;
-        int testFourHundred = year % 400;
-        int testHundred = year % 100;
-        if(year % 4 == 0 && year > 1584 && (testFourHundred == 0 || testHundred != 0)){
-            System.out.println(year + " - leap year");
-        }else{
-            System.out.println(year + " - not leap year");
+        for(int i = 0; i < 17; i+=2){
+            if(i!=0){
+                System.out.println(i);
+            }
         }
     }
     public static void fourTask(){
-        int deliveryDistance = 95;
-        byte deliveryDay = 1;
-        if(deliveryDistance>=20 && deliveryDistance < 60){
-            deliveryDay++;
-        }else if(deliveryDistance>=60 && deliveryDistance < 100){
-            deliveryDay++;
-        }else{
-            deliveryDay = 0;
-        }
-        switch (deliveryDay) {
-            case 0:
-                System.out.println("not delivery");
-                break;
-        
-            default:
-                System.out.println("Потребуется дней: " + deliveryDay);
-                break;
+        for(int j = 10; j>-10; j--){
+            System.out.println(j);
         }
     }
     public static void fiveTask(){
-        byte monthNumber =  5;
-        if(monthNumber <= 12 && monthNumber > 0){
-            switch (monthNumber) {
-                case 12:
-                case 1:
-                case 2:
-                    System.out.println("Winter");
-                    break;
-                case 3:
-                case 4:
-                case 5:
-                    System.out.println("Spring");
-                    break;
-                case 6:
-                case 7:
-                case 8:
-                    System.out.println("Summer");
-                    break;
-                case 9:
-                case 10:
-                case 11:
-                    System.out.println("autmun");
-                    break;
-                default:
-                    break;
+        for(int y = 1904; y < 2096; y +=4){
+            System.out.println(y + " год является високосным");
+        }
+    }
+    public static void sixTask(){
+        for(int u = 0; u < 100; u+=7){
+            if(u!=0){
+                System.out.println(u);
             }
-        }else{
-            System.out.println("Error");
+        }
+    }
+    public static void sevenTask(){
+        for(int o = 1; o < 1000; o*=2){
+            System.out.println(o);
+        }
+    }
+    public static void eightTask(){
+        int cash = 29000;
+        int stockpiling = 0;
+        for(int b = 1; b<=12; b++){
+            stockpiling += cash;
+            System.out.println("Месяц " +b+ " , сумма накоплений равна "+stockpiling+" рублей");
+        }
+    }
+    public static void nineTask(){
+        int cash = 29000;
+        int stockpiling = 0;
+        for(int m = 1; m<=12;m++){
+            stockpiling += stockpiling/100;
+            stockpiling += cash;
+            System.out.println("Месяц "+m+", сумма накоплений равна "+stockpiling+" рублей");
+
+        }
+    }
+    public static void tenTask(){
+        for(int g = 1; g<=10;g++){
+            System.out.println("2*"+g+"="+g*2);
         }
     }
 }
