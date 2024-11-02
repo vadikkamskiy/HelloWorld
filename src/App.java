@@ -10,69 +10,87 @@ public class App {
         sixTask();
         sevenTask();
         eightTask();
-        nineTask();
-        tenTask();        
+        
     }
     public static void firstTask(){
-        for(int i = 1; i < 10; i++){
-            System.out.println(i);
+        int total = 0;
+        short month = 0;
+        while(total < 2_459_000){
+            month++;
+            total += 15000;
+            System.out.println("Месяц "+month+", сумма накоплений равна "+total+" рублей");
         }
+
     }
     public static void secondTask(){
-        for(int i = 10; i>1; i--){
-            System.out.println(i);
+        int count = 0;
+        while(count<10){
+            count++;
+            System.out.print(count+" ");
+        }
+        System.out.print("\n");
+        for(;count>0;count--){
+            System.out.print(count+" ");
         }
     }
     public static void thirdTask(){
-        for(int i = 0; i < 17; i+=2){
-            if(i!=0){
-                System.out.println(i);
-            }
+        System.out.println("\n");
+        int population = 12_000_000;
+        short year = 2024;
+        while (year < 2034) {
+            population += (population/1000*17);
+            population -= (population/1000*8);
+            System.out.println("in " + year + " year, population equals " + population );
+            year++;
         }
     }
     public static void fourTask(){
-        for(int j = 10; j>-10; j--){
-            System.out.println(j);
+        int deposit = 15000;
+        short month = 0;
+        while(deposit<2_000_000){
+            month++;
+            deposit+=(deposit/100*7);
+            System.out.println(month + " month deposit equals "+ deposit);
         }
     }
     public static void fiveTask(){
-        for(int y = 1904; y < 2096; y +=4){
-            System.out.println(y + " год является високосным");
+        int deposit = 15000;
+        short month = 0;
+        while(deposit<2_000_000){
+            month++;
+            deposit+=(deposit/100*7);
+            if(month%6 == 0)
+                System.out.println(month + " month deposit equals "+ deposit);
         }
     }
-    public static void sixTask(){
-        for(int u = 0; u < 100; u+=7){
-            if(u!=0){
-                System.out.println(u);
-            }
+    public static void sixTask() {
+        int deposit = 15000;
+        float year = 0;
+        while(year < 9){
+            year+=0.5;
+            deposit+=((deposit/100*7)*6);
+            System.out.println(year+ " year, deposit equals "+ deposit);
         }
     }
     public static void sevenTask(){
-        for(int o = 1; o < 1000; o*=2){
-            System.out.println(o);
+        int friday = 1;
+        int month = 0;
+        while(month < 31){
+            month++;
+            if(month%7==friday){
+                System.out.println("Сегодня пятница, "+month+"-е число. Необходимо подготовить отчет");
+            }
         }
     }
     public static void eightTask(){
-        int cash = 29000;
-        int stockpiling = 0;
-        for(int b = 1; b<=12; b++){
-            stockpiling += cash;
-            System.out.println("Месяц " +b+ " , сумма накоплений равна "+stockpiling+" рублей");
-        }
-    }
-    public static void nineTask(){
-        int cash = 29000;
-        int stockpiling = 0;
-        for(int m = 1; m<=12;m++){
-            stockpiling += stockpiling/100;
-            stockpiling += cash;
-            System.out.println("Месяц "+m+", сумма накоплений равна "+stockpiling+" рублей");
-
-        }
-    }
-    public static void tenTask(){
-        for(int g = 1; g<=10;g++){
-            System.out.println("2*"+g+"="+g*2);
-        }
+        short year = 2024;
+        short cometYear = 79;
+        short countYear = 0;
+        do{
+            countYear+=cometYear;
+            if(countYear>year-200){
+                System.out.println(countYear);
+            }
+        }while(countYear<year);
     }
 }
