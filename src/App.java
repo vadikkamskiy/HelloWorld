@@ -10,100 +10,88 @@ public class App {
         fiveTask();
         sixTask();
         sevenTask();
+        eightTask();
         
     }
     public static void firstTask(){
-        Scanner scan = new Scanner(System.in);
-        System.out.println("How old are you?");
-        String ageString = scan.nextLine();
-        int age = Integer.parseInt(ageString);
-        if(!ageString.isEmpty() && age > 0){
-            if(age >= 18){
-                System.out.println("you are sooo adult \n" + age + " it's to much");
-            }
-            else{
-                System.out.println("you are not old enough");
-            }
-        }else{
-            System.out.println("Something went wrong");
+        int total = 0;
+        short month = 0;
+        while(total < 2_459_000){
+            month++;
+            total += 15000;
+            System.out.println("Месяц "+month+", сумма накоплений равна "+total+" рублей");
         }
-        System.out.println("First task gone\n\n");
+
     }
     public static void secondTask(){
-        Scanner scan = new Scanner(System.in);
-        System.out.println("what is the temperature now");
-        int temperature = scan.nextInt();
-        if(temperature < 5){
-            System.out.println("you are need wear hat \n" + temperature + " degrees it's so cold");
+        int count = 0;
+        while(count<10){
+            count++;
+            System.out.print(count+" ");
         }
-        else{
-            System.out.println("you are may go walk without hat \n" + temperature + "degrees it's amazing" );
+        System.out.print("\n");
+        for(;count>0;count--){
+            System.out.print(count+" ");
         }
-        System.out.println("Second task gone\n\n");
     }
     public static void thirdTask(){
-        int currentSpeed = 20;
-        String normalSpeed = ", то можно ездить спокойно";
-        String highSpeed = ", то придется заплатить штраф";
-        String output;
-        if(currentSpeed > 60){
-            output = highSpeed;
-        }else{
-            output = normalSpeed;
+        System.out.println("\n");
+        int population = 12_000_000;
+        short year = 2024;
+        while (year < 2034) {
+            population += (population/1000*17);
+            population -= (population/1000*8);
+            System.out.println("in " + year + " year, population equals " + population );
+            year++;
         }
-        System.out.println("ecли скорость : " + currentSpeed + output);
     }
     public static void fourTask(){
-        int currentAge = 37;
-        if(currentAge > 2 && currentAge <= 6){
-            System.out.println("Если возраст человека равен "+ currentAge+", то ему нужно ходить в детский сад ");
-        }else if(currentAge > 6 && currentAge <= 17){
-            System.out.println("Если возраст человека равен "+ currentAge+", то ему нужно ходить в школу ");
-        }else if (currentAge >= 18 && currentAge <= 24) {
-            System.out.println("Если возраст человека равен "+ currentAge+", его место в университете ");
-        }else if(currentAge > 24){
-            System.out.println("Если возраст человека равен "+ currentAge+", он должен работать и обеспечивать семью ");
-        }else{
-            System.out.println("who are you?");
+        int deposit = 15000;
+        short month = 0;
+        while(deposit<2_000_000){
+            month++;
+            deposit+=(deposit/100*7);
+            System.out.println(month + " month deposit equals "+ deposit);
         }
     }
     public static void fiveTask(){
-        int childrenAge  = 5;
-        if(childrenAge < 5 ){
-            System.out.println("Если возраст ребенка равен " + childrenAge + " нельзя кататься на аттракционе");
-        }else if(childrenAge >= 5 && childrenAge < 14){
-            System.out.println("Если возраст ребенка равен " + childrenAge + " можно кататься на аттракционе в сопровождении");
-        }else if(childrenAge >= 14){
-            System.out.println("Если возраст ребенка равен " + childrenAge + " можно кататься без сопровождения взрослого");
+        int deposit = 15000;
+        short month = 0;
+        while(deposit<2_000_000){
+            month++;
+            deposit+=(deposit/100*7);
+            if(month%6 == 0)
+                System.out.println(month + " month deposit equals "+ deposit);
         }
     }
     public static void sixTask() {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("сколько занято мест?");
-        int allPlaces = 102;
-        int seating = 60;
-        int passengers = scan.nextInt();
-        if(passengers < seating){
-            System.out.println("В вагоне осталось " + (seating - passengers) +" сидячих мест");
-        }else if(passengers >= seating && passengers < allPlaces){
-            System.out.println("В вагоне осталось " + (allPlaces - passengers) +" стоячих мест");
-        }else{
-            System.out.println("мест нет");
+        int deposit = 15000;
+        float year = 0;
+        while(year < 9){
+            year+=0.5;
+            deposit+=((deposit/100*7)*6);
+            System.out.println(year+ " year, deposit equals "+ deposit);
         }
     }
     public static void sevenTask(){
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Введите три числа");
-        int first = scan.nextInt();
-        int second = scan.nextInt();
-        int third = scan.nextInt();
-        if(first>second && first > third){
-            System.out.println("first max " + first);
-        }else if(second > first && second > third){
-            System.out.println("second max " + second);
-        }else{
-            System.out.println("third max " + third);
+        int friday = 1;
+        int month = 0;
+        while(month < 31){
+            month++;
+            if(month%7==friday){
+                System.out.println("Сегодня пятница, "+month+"-е число. Необходимо подготовить отчет");
+            }
         }
-        scan.close();
+    }
+    public static void eightTask(){
+        short year = 2024;
+        short cometYear = 79;
+        short countYear = 0;
+        do{
+            countYear+=cometYear;
+            if(countYear>year-200){
+                System.out.println(countYear);
+            }
+        }while(countYear<year);
     }
 }
