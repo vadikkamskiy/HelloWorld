@@ -12,7 +12,7 @@ public class App {
         char[] name = {'V','l','a','d'};
         //secondTask();
         for(int i=0;i<arr0.length;i++){
-            if(i!=2){
+            if(i!=arr0.length-1){
                 System.out.print(arr0[i]+",");
             }else{
                 System.out.print(arr0[i]);
