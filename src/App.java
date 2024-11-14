@@ -12,11 +12,7 @@ public class App {
         System.out.println(detectType(osType,cellPhoneYear));
         //third task
         int distantion = 67;
-        if(distantion >100){
-            System.out.println("нет доставки");
-        }else{
-            System.out.println(detectTimeDelivery(distantion));
-        }
+        System.out.println(detectTimeDelivery(distantion));
 
     }
     public static void detectLeapYear(int y){
@@ -29,12 +25,12 @@ public class App {
 
     public static String detectType(byte os,short y) {
         int currentYear = LocalDate.now().getYear();
-        if(os != 0 || os != 1){
+        if(os != 0 && os != 1){
             System.out.println("unknow os");
         }
         String osDetecting = os == 1 ? "android " : "IOS";
         String appVersion = y > currentYear ? "обычную" : "облегчённую";
-        String detected = "установите " + appVersion + "версию приложения для " + osDetecting);
+        String detected = "установите " + appVersion + "версию приложения для " + osDetecting;
         return detected;
     }
     public static String detectTimeDelivery(int dist){
@@ -42,6 +38,9 @@ public class App {
         if(dist<20) output += "день";
         if (dist>=20 && dist < 60) output += "два дня";
         if (dist>=60 && dist < 100) output += "три дня";
+        if(dist >100){
+            output = "нет доставки";
+        }
         return output;
     }
 }
