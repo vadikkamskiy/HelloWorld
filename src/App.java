@@ -9,14 +9,13 @@ public class App {
         //second task
         short cellPhoneYear = 2021;
         byte osType = 0;
-        detectType(osType,cellPhoneYear);
+        System.out.println(detectType(osType,cellPhoneYear));
         //third task
         int distantion = 67;
         if(distantion >100){
             System.out.println("нет доставки");
         }else{
-            String deliveryTime = detectTimeDelivery(distantion);
-            System.out.println("Доставка займёт " + deliveryTime );
+            System.out.println(detectTimeDelivery(distantion));
         }
 
     }
@@ -28,20 +27,21 @@ public class App {
         }
     }
 
-    public static void detectType(byte os,short y) throws Exception{
+    public static String detectType(byte os,short y) {
         int currentYear = LocalDate.now().getYear();
         if(os != 0 || os != 1){
-            throw new Exception("unknow os");
+            System.out.println("unknow os");
         }
         String osDetecting = os == 1 ? "android " : "IOS";
         String appVersion = y > currentYear ? "обычную" : "облегчённую";
-        System.out.println("установите " + appVersion + "версию приложения для " + osDetecting);
+        String detected = "установите " + appVersion + "версию приложения для " + osDetecting);
+        return detected;
     }
     public static String detectTimeDelivery(int dist){
-        String output = "";
-        if(dist<20) output = "день";
-        if (dist>=20 && dist < 60) output = "два дня";
-        if (dist>=60 && dist < 100) output = "три дня";
+        String output = "доставка займёт ";
+        if(dist<20) output += "день";
+        if (dist>=20 && dist < 60) output += "два дня";
+        if (dist>=60 && dist < 100) output += "три дня";
         return output;
     }
 }
