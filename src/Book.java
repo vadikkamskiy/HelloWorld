@@ -11,4 +11,7 @@ public class Book {
         String bookInfo = name + " " + author.getName() + " " + dateRelease;
         return bookInfo;
     }
+    public void setReleaseYear(int y){
+        dateRelease = y;
+    }
 }
