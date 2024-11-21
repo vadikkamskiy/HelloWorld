@@ -8,7 +8,7 @@ public class Book {
         this.dateRelease = dr;
     }
     public String getBookInfo(){
-        String bookInfo = name + " " + author + " " + dateRelease;
+        String bookInfo = name + " " + author.getName() + " " + dateRelease;
         return bookInfo;
     }
 }
