@@ -13,8 +13,10 @@ public class App {
         TheWildBoysAuthor.setName("William S.", "Burroughs");
         TheWildBoys.setBookInfo("The Wild Boys", TheWildBoysAuthor, 1971);
 
-        System.out.println(TheCatcherInTheRye.getBookInfo());
-        System.out.println(TheWildBoys.getBookInfo());
+        System.out.println(TheCatcherInTheRye.toString());
+        System.out.println(TheWildBoys.toString());
+
+        System.out.println(TheCatcherInTheRye.hashCode());
     }
 }
 
